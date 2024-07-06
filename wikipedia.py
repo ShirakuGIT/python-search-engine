@@ -17,4 +17,4 @@ with open('wikipedia.xml', 'r', encoding='utf-8') as file:
 pages = re.findall(r'<page>(.*?)</page>', data, re.DOTALL)
 
 def parse_page(page):
-    pass
+    page_id = re.search(r'<id>(.*?)</id>', page).group(1)
